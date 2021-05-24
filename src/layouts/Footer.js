@@ -5,12 +5,18 @@ const Footer = () => {
     return (
         <div>
             <h2>Stopka</h2>
-            <Route path = '/' exact render = {(props) =>{
-                console.log(props)
-                return(
-                    <p>Jesteś na stronie głównej</p>
+            <Route path = '/' exact render = {(props) =>(
+                <p>Jesteś na stronie <span>stronie głównej</span></p>
                 )
-            }}/> 
+            }/> 
+            <Route path = '/:page'  render = {(props) =>(
+                <p>Jesteś na stronie <span>{props.match.params.page}</span></p>
+                )
+            }/>
+            <Route path = '/:page/:idProduct' exact render = {(props) =>(
+                <p>Jesteś na stronie <span>{props.match.params.idProduct}</span></p>
+                )
+            }/> 
         </div>
     );
 }
