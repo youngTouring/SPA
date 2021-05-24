@@ -7,7 +7,7 @@ const ProductPage = ({match}) => {
         <>
             <div>Strona produktu</div>
             <Product id = {match.params.nazwa}/>
-            <Link to = '/products'>produkt do listy produktów</Link>
+            <Link to = '/products'>powrót do listy produktów</Link>
         </>
     );
 }
